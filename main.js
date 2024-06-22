@@ -1,20 +1,9 @@
-var change=document.querySelector(".fontSize");
-
- 
- var largF=document.querySelector(".large");
-
-
-var smallF=document.querySelector(".smallBtn");
-console.log(change);
-console.log(largF);
-console.log(smallF);
-function changeFontL(){
-    change.classList.add("large");
-    change.classList.remove("smallF");
+var title="";
+title+=" <h2> My Fav Programming Language </h2>";
+document.querySelector("div").innerHTML+=title;
+var lang=[ 'HTML' , 'CSS' , 'JS'];
+var result="";
+for(var i=0; i<3 ; i++){
+    result+="<li>" + lang[i] + "</li>";
 }
-function changeFontS(){
-    change.classList.add("smallF");
-    change.classList.remove("large");
-}
-largF.onclick=changeFontL;
-smallF.onclick=changeFontS;
+document.querySelector("ul").innerHTML=result;
